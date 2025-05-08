@@ -1,0 +1,21 @@
+FB15k-237_uniker
+
+fb15k237_rules_0.95.txt
+
+RotatE
+
+📊 Model: RotatE 
+📜 Datalog Program: fb15k237_rules_0.95.txt
+
+Metric        both.optimistic.hits_at_10    both.optimistic.hits_at_5    both.optimistic.hits_at_1
+------------  ----------------------------  ---------------------------  ---------------------------
+No Reasoning  0.3654 (0.0022)               0.2776 (0.0021)              0.1234 (0.0019)
+Reasoning     0.3649 (0.0020)               0.2769 (0.0022)              0.1229 (0.0019)
+Delta         -0.0005                       -0.0007                      -0.0005
+
+📊 P-values for t-tests (H1: reasoning > no reasoning):
+  both.optimistic.hits_at_10: 8.2285e-01
+  both.optimistic.hits_at_5: 8.9475e-01
+  both.optimistic.hits_at_1: 8.2337e-01
+
+************************************************************

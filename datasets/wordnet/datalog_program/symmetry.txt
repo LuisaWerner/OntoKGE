@@ -1,0 +1,2 @@
+_:also_see(x, y) = also_see(y, x)
+_:similar_to(x, y) = similar_to(y, x)

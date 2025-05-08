@@ -1,0 +1,15 @@
+sibling(X,Y):- brother(X,Y), X != Y.
+sibling(X,Y):- sister(X,Y), X != Y.
+partner(X,Y):- wife(X,Y), X != Y.
+partner(X,Y):- husband(X,Y), X != Y.
+child(X,Y):- daughter(X,Y), X != Y.
+child(X,Y):- son(X,Y), X != Y.
+parent(X,Y):- mother(X,Y), X != Y.
+parent(X,Y):- father(X,Y), X != Y.
+child(X,Y):- parent(Y,X), X != Y.
+parent(X,Y):- child(Y,X), X != Y.
+sibling(X,Y):- sibling(Y,X), X != Y.
+partner(X,Y):- partner(Y,X), X != Y.
+grandfather(X,Y):- father(X,Z),parent(Y,Z), X != Y.
+grandmother(X,Y):- mother(X,Z),parent(Y,Z), X != Y.
+grandparent(X,Y):- parent(X,Z),parent(Z,Y), X != Y.

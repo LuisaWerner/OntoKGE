@@ -1,0 +1,63 @@
+wordnet
+
+inversion.txt
+
+BoxE
+
+📊 Model: BoxE 
+📜 Datalog Program: inversion.txt
+
+Metric        both.optimistic.hits_at_10    both.optimistic.hits_at_5    both.optimistic.hits_at_1
+------------  ----------------------------  ---------------------------  ---------------------------
+No Reasoning  0.7121 (0.0067)               0.6799 (0.0080)              0.4804 (0.0147)
+Reasoning     0.7120 (0.0054)               0.6832 (0.0053)              0.5147 (0.0090)
+Delta         -0.0001                       0.0032                       0.0342
+
+📊 P-values for t-tests (H1: reasoning > no reasoning):
+  both.optimistic.hits_at_10: 5.3301e-01
+  both.optimistic.hits_at_5: 3.4136e-02
+  both.optimistic.hits_at_1: 6.5848e-16
+
+📜 GodelLogic Analysis:
+              rule1            rule2            rule3            rule4            rule5            rule6            rule7
+------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------
+No Reasoning  0.7501 (0.0636)  0.7163 (0.0968)  0.7092 (0.1151)  0.7286 (0.1188)  0.7400 (0.0845)  0.7719 (0.1182)  0.7386 (0.0950)
+Reasoning     0.8046 (0.0615)  0.5975 (0.0932)  0.7737 (0.0935)  0.6608 (0.1163)  0.6711 (0.0893)  0.8368 (0.1251)  0.6793 (0.0932)
+Delta         0.0545           -0.1188          0.0645           -0.0678          -0.0689          0.0649           -0.0593
+
+📜 LukasiewiczLogic Analysis:
+              rule8            rule9            rule10           rule11           rule12           rule13           rule14
+------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------
+No Reasoning  0.9857 (0.0051)  0.9826 (0.0092)  0.9830 (0.0098)  0.9800 (0.0115)  0.9845 (0.0077)  0.9810 (0.0158)  0.9851 (0.0074)
+Reasoning     0.9910 (0.0050)  0.9680 (0.0157)  0.9902 (0.0048)  0.9727 (0.0149)  0.9811 (0.0083)  0.9880 (0.0132)  0.9818 (0.0079)
+Delta         0.0053           -0.0146          0.0072           -0.0073          -0.0034          0.0070           -0.0033
+
+📜 ProductLogic Analysis:
+              rule15           rule16           rule17           rule18           rule19           rule20           rule21
+------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------
+No Reasoning  0.9706 (0.0116)  0.9629 (0.0189)  0.9619 (0.0254)  0.9581 (0.0250)  0.9698 (0.0143)  0.9641 (0.0307)  0.9695 (0.0150)
+Reasoning     0.9822 (0.0100)  0.9335 (0.0299)  0.9777 (0.0125)  0.9454 (0.0282)  0.9615 (0.0168)  0.9793 (0.0223)  0.9621 (0.0177)
+Delta         0.0116           -0.0294          0.0158           -0.0127          -0.0083          0.0152           -0.0074
+  rule1: rcs_GodelLogic__:hypernym(x, y) = hyponym(y, x)
+  rule2: rcs_GodelLogic__:instance_hypernym(x, y) = instance_hyponym(y, x)
+  rule3: rcs_GodelLogic__:member_holonym(x, y) = member_meronym(y, x)
+  rule4: rcs_GodelLogic__:member_of_domain_region(x, y) = synset_domain_region_of(y, x)
+  rule5: rcs_GodelLogic__:member_of_domain_topic(x, y) = synset_domain_topic_of(y, x)
+  rule6: rcs_GodelLogic__:member_of_domain_usage(x, y) = synset_domain_usage_of(y, x)
+  rule7: rcs_GodelLogic__:part_of(x, y) = has_part(y, x)
+  rule8: rcs_LukasiewiczLogic__:hypernym(x, y) = hyponym(y, x)
+  rule9: rcs_LukasiewiczLogic__:instance_hypernym(x, y) = instance_hyponym(y, x)
+  rule10: rcs_LukasiewiczLogic__:member_holonym(x, y) = member_meronym(y, x)
+  rule11: rcs_LukasiewiczLogic__:member_of_domain_region(x, y) = synset_domain_region_of(y, x)
+  rule12: rcs_LukasiewiczLogic__:member_of_domain_topic(x, y) = synset_domain_topic_of(y, x)
+  rule13: rcs_LukasiewiczLogic__:member_of_domain_usage(x, y) = synset_domain_usage_of(y, x)
+  rule14: rcs_LukasiewiczLogic__:part_of(x, y) = has_part(y, x)
+  rule15: rcs_ProductLogic__:hypernym(x, y) = hyponym(y, x)
+  rule16: rcs_ProductLogic__:instance_hypernym(x, y) = instance_hyponym(y, x)
+  rule17: rcs_ProductLogic__:member_holonym(x, y) = member_meronym(y, x)
+  rule18: rcs_ProductLogic__:member_of_domain_region(x, y) = synset_domain_region_of(y, x)
+  rule19: rcs_ProductLogic__:member_of_domain_topic(x, y) = synset_domain_topic_of(y, x)
+  rule20: rcs_ProductLogic__:member_of_domain_usage(x, y) = synset_domain_usage_of(y, x)
+  rule21: rcs_ProductLogic__:part_of(x, y) = has_part(y, x)
+
+************************************************************

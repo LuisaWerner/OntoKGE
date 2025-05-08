@@ -1,0 +1,4 @@
+_:parent(x,y) = child(y,x)
+_:child(x,y) = parent(y,x)
+_:wife(x,y) = husband(y,x)
+_:husband(x,y) = wife(y,x)

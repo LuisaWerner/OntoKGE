@@ -1,0 +1,66 @@
+method: "grid"
+name: "Hyperparameter Optimization"
+parameters:
+  avoid_isolated_entities:
+    values: [false]
+  batch_size:
+    value: 1024
+  create_inverse_triples:
+    value: false
+  datalog_file:
+    values: ["inversion.txt", "symmetry.txt"]
+  dataset_name:
+    value: "wordnet"
+  device_num:
+    value: 0
+  embedding_dim:
+    values: [200]
+  epochs:
+    value: 300
+  es_delta:
+    value: 0.0
+  es_patience:
+    value: 50
+  iter_limit:
+    value: 100
+  learning_rate:
+    value: 0.001
+  log_embeddings:
+    value: false
+  log_intermediate_concept:
+    value: false
+  log_redundant:
+    value: false
+  log_time_and_facts:
+    value: false
+  loss:
+    value: "BCEWithLogitsLoss"
+  min_degree:
+    value: 1
+  model:
+    values: ["DistMult", "RGCN", "ComplEx"]
+  num_triples_to_drop:
+    values: [0.25]
+  optimizer:
+    value: "Adam"
+  reason:
+    values: [false, true]
+  seed:
+    values: [1]
+  silent:
+    value: false
+  use_early_stopping:
+    value: true
+  wandb_mode:
+    value: "online"
+  wandb_project:
+    value: "rcs_rulekge"
+  evaluate_rcs:
+    value: true
+  rcs_normalization:
+    value: "MinMaxNormalization"
+  rcs_logic:
+    value: ["GodelLogic", "LukasiewiczLogic", "ProductLogic"]
+  rcs_aggregation:
+    value: "Mean"
+

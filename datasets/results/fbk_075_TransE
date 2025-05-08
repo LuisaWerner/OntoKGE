@@ -1,0 +1,21 @@
+FB15k-237_uniker
+
+fb15k237_rules_0.75.txt
+
+TransE
+
+📊 Model: TransE 
+📜 Datalog Program: fb15k237_rules_0.75.txt
+
+Metric        both.optimistic.hits_at_10    both.optimistic.hits_at_5    both.optimistic.hits_at_1
+------------  ----------------------------  ---------------------------  ---------------------------
+No Reasoning  0.2440 (0.0040)               0.1655 (0.0032)              0.0225 (0.0010)
+Reasoning     0.2433 (0.0035)               0.1650 (0.0032)              0.0225 (0.0009)
+Delta         -0.0007                       -0.0006                      0.0000
+
+📊 P-values for t-tests (H1: reasoning > no reasoning):
+  both.optimistic.hits_at_10: 7.5832e-01
+  both.optimistic.hits_at_5: 7.4874e-01
+  both.optimistic.hits_at_1: 4.7272e-01
+
+************************************************************

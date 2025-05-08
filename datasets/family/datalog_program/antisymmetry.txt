@@ -1,0 +1,13 @@
+_:NOT_mother(x,y) = mother(y,x)
+_:NOT_father(x,y) = father(y,x)
+_:NOT_son(x,y) = son(y,x)
+_:NOT_daughter(x,y) = daughter(y,x)
+_:NOT_parent(x,y) = parent(y,x)
+_:NOT_child(x,y) = child(y,x)
+_:NOT_aunt(x,y) = aunt(y,x)
+_:NOT_uncle(x,y) = uncle(y,x)
+_:NOT_wife(x,y) = wife(y,x)
+_:NOT_husband(x,y) = husband(y,x)
+_:NOT_niece(x,y) = niece(y,x)
+_:NOT_nephew(x,y) = nephew(y,x)
+

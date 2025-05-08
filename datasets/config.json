@@ -1,0 +1,37 @@
+{
+    "configs": [
+        {
+            "avoid_isolated_entities": false,
+            "batch_size": 1000,
+            "create_inverse_triples": false,
+            "dataset_name": "FB15k-237_uniker",
+            "device_num": 0,
+            "datalog_file": "fb15k237_rules_0.85.txt",
+            "embedding_dim": 50,
+            "epochs": 3,
+            "es_delta": 0.0,
+            "es_patience": 50,
+            "iter_limit": 100,
+            "learning_rate": 0.001,
+            "log_embeddings": false,
+            "log_intermediate_concept": false,
+            "log_redundant": false,
+            "log_time_and_facts": false,
+            "loss": "BCEWithLogitsLoss",
+            "min_degree": 1,
+            "model": "TransE",
+            "num_triples_to_drop": 0.1,
+            "optimizer": "Adam",
+            "reason": true,
+            "seed": 2,
+            "silent": false,
+            "use_early_stopping": true,
+            "wandb_mode": "disabled",
+            "wandb_project": "tests_nell",
+            "rcs_normalization": "MinMaxNormalization",
+            "rcs_logic": "GodelLogic",
+            "rcs_aggregation": "Mean",
+            "evaluate_rcs": false
+        }
+    ]
+}

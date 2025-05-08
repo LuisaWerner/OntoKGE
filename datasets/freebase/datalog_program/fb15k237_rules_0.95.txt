@@ -1,0 +1,5 @@
+0.978181818:rel_234(x,y) = rel_186(x,z) and rel_222(z,y)
+0.970238095:rel_23(x,y) = rel_23(x,z) and rel_223(z,y)
+0.957540264:rel_35(x,y) = rel_114(x,z) and rel_222(z,y)
+0.981494174:rel_114(x,y) = rel_114(x,z) and rel_153(z,y)
+0.956713133:rel_35(x,y) = rel_114(x,z) and rel_208(z,y)

@@ -1,0 +1,12 @@
+0.5:parent(a,b) = father(a,b)
+_:not_parent(a,b) = mother(a,b)
+_:parent(a,b) = son(b,a)
+_:parent(a,b) = daughter(b,a)
+_:sibling(a,b) = sister(a,b)
+_:sibling(a,b) = brother(a,b)
+_:partner(a,b) = wife(a,b)
+#
+
+_:partner(a,b) = husband(a,b)
+_:child(a,b) = daughter(a,b)
+_:child(a,b) = son(a,b)

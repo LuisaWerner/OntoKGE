@@ -1,0 +1,21 @@
+_:female(x) = daughter(x, _) or sister(x, _) or mother(x, _) or aunt(x, _) or wife(x, _)
+_:male(x) = son(x, _) or brother(x, _) or father(x, _) or uncle(x, _) or husband(x, _)
+
+_:aunt(y,x) = niece(x,y) and female(y)
+_:aunt(y,x) = nephew(x,y) and female(y)
+_:uncle(y,x) = niece(x,y) and male(y)
+_:uncle(y,x) = nephew(x,y) and male(y)
+
+_:mother(y,x) = child(x,y) and female(y)
+_:father(y,x) = child(x,y) and male(y)
+
+_:daughter(y,x) = parent(x,y) and female(y)
+_:son(y,x) = parent(x,y) and male(y)
+
+_:sister(y,x) = sibling(x,y) and female(y)
+_:brother(y,x) = sibling(x,y) and male(y)
+
+
+
+
+

@@ -1,0 +1,21 @@
+FB15k-237_uniker
+
+fb15k237_rules_0.95.txt
+
+BoxE
+
+📊 Model: BoxE 
+📜 Datalog Program: fb15k237_rules_0.95.txt
+
+Metric        both.optimistic.hits_at_10    both.optimistic.hits_at_5    both.optimistic.hits_at_1
+------------  ----------------------------  ---------------------------  ---------------------------
+No Reasoning  0.3403 (0.0029)               0.2528 (0.0028)              0.1115 (0.0031)
+Reasoning     0.3404 (0.0028)               0.2532 (0.0025)              0.1114 (0.0025)
+Delta         0.0000                        0.0004                       -0.0001
+
+📊 P-values for t-tests (H1: reasoning > no reasoning):
+  both.optimistic.hits_at_10: 4.7420e-01
+  both.optimistic.hits_at_5: 2.8797e-01
+  both.optimistic.hits_at_1: 5.4838e-01
+
+************************************************************

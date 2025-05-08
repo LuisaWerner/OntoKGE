@@ -1,0 +1,72 @@
+family
+
+hierarchy.txt
+
+BoxE
+
+📊 Model: BoxE 
+📜 Datalog Program: hierarchy.txt
+
+Metric        both.optimistic.hits_at_10    both.optimistic.hits_at_5    both.optimistic.hits_at_1
+------------  ----------------------------  ---------------------------  ---------------------------
+No Reasoning  0.3869 (0.0060)               0.2670 (0.0056)              0.0936 (0.0035)
+Reasoning     0.3994 (0.0054)               0.2748 (0.0048)              0.1011 (0.0038)
+Delta         0.0124                        0.0078                       0.0074
+
+📊 P-values for t-tests (H1: reasoning > no reasoning):
+  both.optimistic.hits_at_10: 5.9287e-12
+  both.optimistic.hits_at_5: 1.6349e-07
+  both.optimistic.hits_at_1: 4.0907e-11
+
+📜 GodelLogic Analysis:
+              rule1            rule2            rule3            rule4            rule5            rule6            rule7            rule8            rule9            rule10
+------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------
+No Reasoning  0.6443 (0.0471)  0.7098 (0.0708)  0.7971 (0.0494)  0.7591 (0.0546)  0.6641 (0.0401)  0.6891 (0.0371)  0.6651 (0.0546)  0.6596 (0.0665)  0.7959 (0.0550)  0.8384 (0.0565)
+Reasoning     0.6518 (0.0499)  0.7001 (0.0606)  0.8238 (0.0425)  0.7227 (0.0537)  0.6923 (0.0555)  0.6499 (0.0555)  0.7409 (0.0593)  0.7278 (0.0674)  0.7748 (0.0626)  0.7972 (0.0675)
+Delta         0.0075           -0.0097          0.0267           -0.0364          0.0282           -0.0392          0.0758           0.0682           -0.0211          -0.0412
+
+📜 LukasiewiczLogic Analysis:
+              rule11           rule12           rule13           rule14           rule15           rule16           rule17           rule18           rule19           rule20
+------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------
+No Reasoning  0.9751 (0.0058)  0.9821 (0.0057)  0.9860 (0.0041)  0.9870 (0.0031)  0.9771 (0.0060)  0.9738 (0.0052)  0.9705 (0.0084)  0.9700 (0.0081)  0.9911 (0.0028)  0.9928 (0.0033)
+Reasoning     0.9803 (0.0048)  0.9855 (0.0044)  0.9912 (0.0028)  0.9859 (0.0045)  0.9856 (0.0039)  0.9798 (0.0050)  0.9853 (0.0046)  0.9842 (0.0060)  0.9909 (0.0034)  0.9916 (0.0037)
+Delta         0.0052           0.0034           0.0052           -0.0011          0.0085           0.0060           0.0148           0.0142           -0.0002          -0.0012
+
+📜 ProductLogic Analysis:
+              rule21           rule22           rule23           rule24           rule25           rule26           rule27           rule28           rule29           rule30
+------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------  ---------------
+No Reasoning  0.9448 (0.0130)  0.9622 (0.0136)  0.9710 (0.0093)  0.9720 (0.0081)  0.9514 (0.0108)  0.9453 (0.0099)  0.9375 (0.0155)  0.9353 (0.0174)  0.9808 (0.0073)  0.9849 (0.0075)
+Reasoning     0.9518 (0.0109)  0.9653 (0.0101)  0.9819 (0.0060)  0.9692 (0.0098)  0.9654 (0.0096)  0.9516 (0.0112)  0.9658 (0.0104)  0.9631 (0.0136)  0.9802 (0.0090)  0.9817 (0.0096)
+Delta         0.0070           0.0031           0.0109           -0.0028          0.0140           0.0063           0.0283           0.0278           -0.0006          -0.0032
+  rule1: rcs_GodelLogic__:child(a, b) = daughter(a, b)
+  rule2: rcs_GodelLogic__:child(a, b) = son(a, b)
+  rule3: rcs_GodelLogic__:parent(a, b) = daughter(b, a)
+  rule4: rcs_GodelLogic__:parent(a, b) = father(a, b)
+  rule5: rcs_GodelLogic__:parent(a, b) = mother(a, b)
+  rule6: rcs_GodelLogic__:parent(a, b) = son(b, a)
+  rule7: rcs_GodelLogic__:partner(a, b) = husband(a, b)
+  rule8: rcs_GodelLogic__:partner(a, b) = wife(a, b)
+  rule9: rcs_GodelLogic__:sibling(a, b) = brother(a, b)
+  rule10: rcs_GodelLogic__:sibling(a, b) = sister(a, b)
+  rule11: rcs_LukasiewiczLogic__:child(a, b) = daughter(a, b)
+  rule12: rcs_LukasiewiczLogic__:child(a, b) = son(a, b)
+  rule13: rcs_LukasiewiczLogic__:parent(a, b) = daughter(b, a)
+  rule14: rcs_LukasiewiczLogic__:parent(a, b) = father(a, b)
+  rule15: rcs_LukasiewiczLogic__:parent(a, b) = mother(a, b)
+  rule16: rcs_LukasiewiczLogic__:parent(a, b) = son(b, a)
+  rule17: rcs_LukasiewiczLogic__:partner(a, b) = husband(a, b)
+  rule18: rcs_LukasiewiczLogic__:partner(a, b) = wife(a, b)
+  rule19: rcs_LukasiewiczLogic__:sibling(a, b) = brother(a, b)
+  rule20: rcs_LukasiewiczLogic__:sibling(a, b) = sister(a, b)
+  rule21: rcs_ProductLogic__:child(a, b) = daughter(a, b)
+  rule22: rcs_ProductLogic__:child(a, b) = son(a, b)
+  rule23: rcs_ProductLogic__:parent(a, b) = daughter(b, a)
+  rule24: rcs_ProductLogic__:parent(a, b) = father(a, b)
+  rule25: rcs_ProductLogic__:parent(a, b) = mother(a, b)
+  rule26: rcs_ProductLogic__:parent(a, b) = son(b, a)
+  rule27: rcs_ProductLogic__:partner(a, b) = husband(a, b)
+  rule28: rcs_ProductLogic__:partner(a, b) = wife(a, b)
+  rule29: rcs_ProductLogic__:sibling(a, b) = brother(a, b)
+  rule30: rcs_ProductLogic__:sibling(a, b) = sister(a, b)
+
+************************************************************

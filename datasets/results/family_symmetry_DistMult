@@ -1,0 +1,48 @@
+family
+
+symmetry.txt
+
+DistMult
+
+📊 Model: DistMult 
+📜 Datalog Program: symmetry.txt
+
+Metric        both.optimistic.hits_at_10    both.optimistic.hits_at_5    both.optimistic.hits_at_1
+------------  ----------------------------  ---------------------------  ---------------------------
+No Reasoning  0.2785 (0.0250)               0.2142 (0.0185)              0.0950 (0.0068)
+Reasoning     0.2861 (0.0229)               0.2221 (0.0173)              0.0973 (0.0068)
+Delta         0.0077                        0.0079                       0.0022
+
+📊 P-values for t-tests (H1: reasoning > no reasoning):
+  both.optimistic.hits_at_10: 1.1060e-01
+  both.optimistic.hits_at_5: 4.6461e-02
+  both.optimistic.hits_at_1: 1.0625e-01
+
+📜 GodelLogic Analysis:
+              rule1            rule2
+------------  ---------------  ---------------
+No Reasoning  0.9546 (0.0130)  0.9470 (0.0082)
+Reasoning     0.9549 (0.0114)  0.9443 (0.0092)
+Delta         0.0003           -0.0027
+
+📜 LukasiewiczLogic Analysis:
+              rule3            rule4
+------------  ---------------  ---------------
+No Reasoning  1.0000 (0.0000)  1.0000 (0.0000)
+Reasoning     1.0000 (0.0000)  1.0000 (0.0000)
+Delta         0.0000           0.0000
+
+📜 ProductLogic Analysis:
+              rule5            rule6
+------------  ---------------  ---------------
+No Reasoning  1.0000 (0.0000)  1.0000 (0.0000)
+Reasoning     1.0000 (0.0000)  1.0000 (0.0000)
+Delta         0.0000           0.0000
+  rule1: rcs_GodelLogic__:partner(a, b) = partner(b, a)
+  rule2: rcs_GodelLogic__:sibling(a, b) = sibling(b, a)
+  rule3: rcs_LukasiewiczLogic__:partner(a, b) = partner(b, a)
+  rule4: rcs_LukasiewiczLogic__:sibling(a, b) = sibling(b, a)
+  rule5: rcs_ProductLogic__:partner(a, b) = partner(b, a)
+  rule6: rcs_ProductLogic__:sibling(a, b) = sibling(b, a)
+
+************************************************************

@@ -1,0 +1,7 @@
+_:aunt(x,z) = sister(x,y) and mother(y,z)
+_:aunt(x,z) = sister(x,y) and father(y,z)
+_:uncle(x,z) = brother(x,y) and mother(y,z)
+_:uncle(x,z) = brother(x,y) and father(y,z)
+
+_:mother(x,z) = wife(x,y) and father(y,z)
+_:father(x,z) = husband(x,y) and mother(y,z)

@@ -1,0 +1,41 @@
+
+
+Model: BoxE 
+Datalog Program: symmetry.txt
+
+Metric        both.optimistic.hits_at_10    both.optimistic.hits_at_5    both.optimistic.hits_at_1
+------------  ----------------------------  ---------------------------  ---------------------------
+No Reasoning  0.3870 (0.0062)               0.2672 (0.0056)              0.0937 (0.0035)
+Reasoning     0.3983 (0.0069)               0.2742 (0.0060)              0.1003 (0.0033)
+Delta         0.0113                        0.0070                       0.0065
+
+P-values for t-tests (H1: reasoning > no reasoning):
+  both.optimistic.hits_at_10: 4.8181e-09
+  both.optimistic.hits_at_5: 9.4236e-06
+  both.optimistic.hits_at_1: 1.9538e-10
+
+GodelLogic Analysis:
+              rule1            rule2
+------------  ---------------  ---------------
+No Reasoning  0.7175 (0.0287)  0.7306 (0.0121)
+Reasoning     0.7263 (0.0238)  0.7285 (0.0155)
+Delta         0.0088           -0.0021
+
+LukasiewiczLogic Analysis:
+              rule1            rule2
+------------  ---------------  ---------------
+No Reasoning  0.9711 (0.0044)  0.9818 (0.0019)
+Reasoning     0.9838 (0.0026)  0.9905 (0.0013)
+Delta         0.0127           0.0087
+
+ProductLogic Analysis:
+              rule1           rule2
+------------  ---------------  ---------------
+No Reasoning  0.9393 (0.0064)  0.9608 (0.0045)
+Reasoning     0.9643 (0.0044)  0.9774 (0.0026)
+Delta         0.0250           0.0166
+  rule1: partner(a, b) = partner(b, a)
+  rule2: sibling(a, b) = sibling(b, a)
+
+
+************************************************************

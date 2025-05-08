@@ -1,0 +1,54 @@
+family
+
+inversion.txt
+
+RotatE
+
+📊 Model: RotatE 
+📜 Datalog Program: inversion.txt
+
+Metric        both.optimistic.hits_at_10    both.optimistic.hits_at_5    both.optimistic.hits_at_1
+------------  ----------------------------  ---------------------------  ---------------------------
+No Reasoning  0.0663 (0.0256)               0.0444 (0.0188)              0.0141 (0.0059)
+Reasoning     0.1977 (0.0812)               0.1587 (0.0635)              0.0827 (0.0204)
+Delta         0.1314                        0.1142                       0.0685
+
+📊 P-values for t-tests (H1: reasoning > no reasoning):
+  both.optimistic.hits_at_10: 5.3258e-12
+  both.optimistic.hits_at_5: 1.2401e-13
+  both.optimistic.hits_at_1: 2.4168e-25
+
+📜 GodelLogic Analysis:
+              rule1            rule2            rule3            rule4
+------------  ---------------  ---------------  ---------------  ---------------
+No Reasoning  0.7023 (0.0279)  0.7350 (0.0283)  0.7023 (0.0279)  0.7350 (0.0283)
+Reasoning     0.6893 (0.0280)  0.7488 (0.0255)  0.6893 (0.0280)  0.7488 (0.0255)
+Delta         -0.0130          0.0138           -0.0130          0.0138
+
+📜 LukasiewiczLogic Analysis:
+              rule5            rule6            rule7            rule8
+------------  ---------------  ---------------  ---------------  ---------------
+No Reasoning  0.9715 (0.0040)  0.9777 (0.0049)  0.9715 (0.0040)  0.9777 (0.0049)
+Reasoning     0.9778 (0.0044)  0.9752 (0.0054)  0.9778 (0.0044)  0.9752 (0.0054)
+Delta         0.0063           -0.0025          0.0063           -0.0025
+
+📜 ProductLogic Analysis:
+              rule9            rule10           rule11           rule12
+------------  ---------------  ---------------  ---------------  ---------------
+No Reasoning  0.9383 (0.0089)  0.9540 (0.0092)  0.9383 (0.0089)  0.9540 (0.0092)
+Reasoning     0.9479 (0.0070)  0.9525 (0.0094)  0.9479 (0.0070)  0.9525 (0.0094)
+Delta         0.0096           -0.0015          0.0096           -0.0015
+  rule1: rcs_GodelLogic__:child(x, y) = parent(y, x)
+  rule2: rcs_GodelLogic__:husband(x, y) = wife(y, x)
+  rule3: rcs_GodelLogic__:parent(x, y) = child(y, x)
+  rule4: rcs_GodelLogic__:wife(x, y) = husband(y, x)
+  rule5: rcs_LukasiewiczLogic__:child(x, y) = parent(y, x)
+  rule6: rcs_LukasiewiczLogic__:husband(x, y) = wife(y, x)
+  rule7: rcs_LukasiewiczLogic__:parent(x, y) = child(y, x)
+  rule8: rcs_LukasiewiczLogic__:wife(x, y) = husband(y, x)
+  rule9: rcs_ProductLogic__:child(x, y) = parent(y, x)
+  rule10: rcs_ProductLogic__:husband(x, y) = wife(y, x)
+  rule11: rcs_ProductLogic__:parent(x, y) = child(y, x)
+  rule12: rcs_ProductLogic__:wife(x, y) = husband(y, x)
+
+************************************************************

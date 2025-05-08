@@ -1,0 +1,1 @@
+_:sibling(a,c) = sibling(a,b) and sibling(b,c)

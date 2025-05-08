@@ -1,0 +1,48 @@
+wordnet
+
+symmetry.txt
+
+TransE
+
+📊 Model: TransE 
+📜 Datalog Program: symmetry.txt
+
+Metric        both.optimistic.hits_at_10    both.optimistic.hits_at_5    both.optimistic.hits_at_1
+------------  ----------------------------  ---------------------------  ---------------------------
+No Reasoning  0.5410 (0.0179)               0.4806 (0.0160)              0.0000 (0.0000)
+Reasoning     0.5412 (0.0172)               0.4804 (0.0159)              0.0000 (0.0000)
+Delta         0.0002                        -0.0002                      0.0000
+
+📊 P-values for t-tests (H1: reasoning > no reasoning):
+  both.optimistic.hits_at_10: 4.8452e-01
+  both.optimistic.hits_at_5: 5.1897e-01
+  both.optimistic.hits_at_1: 1.6073e-01
+
+📜 GodelLogic Analysis:
+              rule1            rule2
+------------  ---------------  ---------------
+No Reasoning  0.6334 (0.0089)  0.6391 (0.0107)
+Reasoning     0.6303 (0.0107)  0.6389 (0.0110)
+Delta         -0.0031          -0.0002
+
+📜 LukasiewiczLogic Analysis:
+              rule3            rule4
+------------  ---------------  ---------------
+No Reasoning  0.9835 (0.0017)  0.9800 (0.0019)
+Reasoning     0.9842 (0.0014)  0.9804 (0.0022)
+Delta         0.0007           0.0004
+
+📜 ProductLogic Analysis:
+              rule5            rule6
+------------  ---------------  ---------------
+No Reasoning  0.9420 (0.0063)  0.9343 (0.0076)
+Reasoning     0.9425 (0.0072)  0.9353 (0.0071)
+Delta         0.0005           0.0010
+  rule1: rcs_GodelLogic__:also_see(x, y) = also_see(y, x)
+  rule2: rcs_GodelLogic__:similar_to(x, y) = similar_to(y, x)
+  rule3: rcs_LukasiewiczLogic__:also_see(x, y) = also_see(y, x)
+  rule4: rcs_LukasiewiczLogic__:similar_to(x, y) = similar_to(y, x)
+  rule5: rcs_ProductLogic__:also_see(x, y) = also_see(y, x)
+  rule6: rcs_ProductLogic__:similar_to(x, y) = similar_to(y, x)
+
+************************************************************

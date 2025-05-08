@@ -1,0 +1,7 @@
+_:part_of(x, y) = has_part(y, x)
+_:hypernym(x, y) = hyponym(y, x)
+_:instance_hypernym(x, y) = instance_hyponym(y, x)
+_:member_holonym(x, y) = member_meronym(y, x)
+_:member_of_domain_region(x, y) = synset_domain_region_of(y, x)
+_:member_of_domain_topic(x, y) = synset_domain_topic_of(y, x)
+_:member_of_domain_usage(x, y) = synset_domain_usage_of(y, x)

@@ -1,0 +1,2 @@
+_:sibling(a,b) = sibling(b,a)
+_:partner(a,b) = partner(b,a)
